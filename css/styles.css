@@ -320,14 +320,16 @@ ul {
 .item-pedestals {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     z-index: 3;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     gap: clamp(3rem, 8vw, 8rem);
-    width: min(90%, 960px);
+    width: 100%;
+    max-width: 960px;
     animation: fadeInUp 1s ease 0.3s both;
 }
 
