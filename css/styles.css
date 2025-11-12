@@ -276,7 +276,7 @@ ul {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-xl) var(--spacing-md) calc(var(--spacing-xl) + 220px);
     background: var(--color-bg-dark);
     overflow: hidden;
 }
@@ -322,15 +322,17 @@ ul {
    Item Pedestals
    ============================================ */
 .item-pedestals {
-    position: relative;
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 3;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     gap: clamp(3rem, 8vw, 8rem);
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto var(--spacing-lg);
+    width: min(90%, 960px);
+    margin: 0 auto;
     animation: fadeInUp 1s ease 0.3s both;
 }
 
@@ -1088,6 +1090,17 @@ ul {
     /* Hero */
     .hero-background {
         width: 90%;
+    }
+
+    .hero {
+        padding-bottom: var(--spacing-xl);
+    }
+
+    .item-pedestals {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin: 0 auto var(--spacing-md);
     }
 
     /* Item Pedestals */
