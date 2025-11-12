@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inscripted - A Minecraft ARPG plugin inspired by Path of Exile and Tibia. Dynamic itemization, archetype-based progression, and deterministic character building.">
+    <meta name="keywords" content="Minecraft, ARPG, RPG, plugin, Path of Exile, Tibia, item system, archetypes">
+    <meta name="author" content="Daniel Amorim (Amora)">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Inscripted - Minecraft ARPG Server">
+    <meta property="og:description" content="Experience dynamic itemization and archetype-based progression in Minecraft">
+    <meta property="og:image" content="./assets/images/inscriptedlogo.png">
+
+    <title>Inscripted - Minecraft ARPG Server</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Metamorphous&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./assets/images/discordlogo.png" alt="Inscripted Discord mark" class="nav-logo-mark">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#items" class="nav-link">Items</a></li>
+                <li><a href="#archetypes" class="nav-link">Archetypes</a></li>
+                <li><a href="#developer" class="nav-link">Developer</a></li>
+                <li><a href="https://discord.gg/SWnWghYRHr" target="_blank" rel="noopener noreferrer" class="nav-link">Discord</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-media">
+            <img src="./assets/images/inscriptedlogo.png" alt="Inscripted banner" class="hero-background">
+
+            <!-- Item Pedestals Showcase -->
+            <div class="item-pedestals">
+                <div class="pedestal pedestal-left" data-item="Marauder's Axe">
+                    <div class="pedestal-glow"></div>
+                    <img src="./assets/images/t3axe.png" alt="Tier 3 Axe" class="item-sprite">
+                    <div class="pedestal-base"></div>
+                    <span class="pedestal-label">Strength</span>
+                </div>
+
+                <div class="pedestal pedestal-center" data-item="Arcane Wand">
+                    <div class="pedestal-glow"></div>
+                    <img src="./assets/images/t5wand.png" alt="Tier 5 Wand" class="item-sprite">
+                    <div class="pedestal-base"></div>
+                    <span class="pedestal-label">Intelligence</span>
+                </div>
+
+                <div class="pedestal pedestal-right" data-item="Hunter's Bow">
+                    <div class="pedestal-glow"></div>
+                    <img src="./assets/images/t5bow.png" alt="Tier 5 Bow" class="item-sprite">
+                    <div class="pedestal-base"></div>
+                    <span class="pedestal-label">Dexterity</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll to Explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Item System Section -->
+    <section id="items" class="section items-section">
+        <div class="container">
+            <h2 class="section-title">The Item System</h2>
+            <p class="section-intro">
+                Inscripted features a living, dynamic item ecosystem built on deterministic progression rather than pure randomness.
+                Every piece of equipment tells a story and enables unique playstyles.
+            </p>
+
+            <div class="philosophy-card">
+                <h3 class="philosophy-title">You Are What You Wear</h3>
+                <p>
+                    Characters are defined by their equipment, not fixed classes. This philosophy creates diverse PvP experiences
+                    where each playstyle has strategic purpose and counter-play opportunities.
+                </p>
+            </div>
+
+            <div class="item-categories">
+                <div class="item-card craftables">
+                    <div class="item-icon">⚒️</div>
+                    <h3>Craftables</h3>
+                    <p>
+                        Modifiable items whose inscriptions (magical properties) can be altered using currency like Orbs.
+                        Craft your perfect build through deterministic progression.
+                    </p>
+                    <ul class="item-features">
+                        <li>Customizable inscriptions</li>
+                        <li>Deterministic progression</li>
+                        <li>Build-focused itemization</li>
+                        <li>Orb-based modification</li>
+                    </ul>
+                </div>
+
+                <div class="item-card relics">
+                    <div class="item-icon">✨</div>
+                    <h3>Relics</h3>
+                    <p>
+                        Unique, unchangeable items designed to create unconventional builds or subvert core game mechanics.
+                        Discover powerful artifacts that define entire playstyles.
+                    </p>
+                    <ul class="item-features">
+                        <li>Unchangeable properties</li>
+                        <li>Unique mechanics</li>
+                        <li>Build-defining effects</li>
+                        <li>Strategic diversity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archetypes Section -->
+    <section id="archetypes" class="section archetypes-section">
+        <div class="container">
+            <h2 class="section-title">The Archetype System</h2>
+            <p class="section-intro">
+                Three core attributes form the foundation of all character builds. Master the trinity of Strength, Dexterity,
+                and Intelligence to forge your perfect warrior.
+            </p>
+
+            <!-- Attribute Trinity -->
+            <div class="attribute-trinity">
+                <div class="attribute-card strength">
+                    <div class="attribute-icon">🔥</div>
+                    <h3>Strength</h3>
+                    <p class="attribute-element">Fire Element</p>
+                    <p>Physical damage and mitigation. The path of raw power and unyielding defense.</p>
+                </div>
+
+                <div class="attribute-card dexterity">
+                    <div class="attribute-icon">⚡</div>
+                    <h3>Dexterity</h3>
+                    <p class="attribute-element">Lightning Element</p>
+                    <p>Evasiveness and mobility. Strike fast, strike true, never be where they expect.</p>
+                </div>
+
+                <div class="attribute-card intelligence">
+                    <div class="attribute-icon">❄️</div>
+                    <h3>Intelligence</h3>
+                    <p class="attribute-element">Cold Element</p>
+                    <p>Elemental damage and stamina. Harness the arcane forces to devastate your foes.</p>
+                </div>
+            </div>
+
+            <!-- Individual Archetypes -->
+            <h3 class="archetypes-subtitle">Choose Your Path</h3>
+
+            <div class="archetype-grid">
+                <!-- Marauder -->
+                <div class="archetype-card marauder">
+                    <div class="archetype-header">
+                        <h3 class="archetype-name">Marauder</h3>
+                        <div class="archetype-attributes">
+                            <span class="attr-badge strength-badge">Strength</span>
+                        </div>
+                    </div>
+                    <div class="archetype-content">
+                        <p class="archetype-description">
+                            The embodiment of raw power and resilience. Marauders don heavy plating armor and wield massive axes,
+                            dominating the battlefield through sheer force and unbreakable defense.
+                        </p>
+                        <div class="archetype-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Primary Role</span>
+                                <span class="stat-value">Tank / Bruiser</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Equipment</span>
+                                <span class="stat-value">Heavy Plating, Axes</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Playstyle</span>
+                                <span class="stat-value">Physical Dominance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gladiator -->
+                <div class="archetype-card gladiator">
+                    <div class="archetype-header">
+                        <h3 class="archetype-name">Gladiator</h3>
+                        <div class="archetype-attributes">
+                            <span class="attr-badge strength-badge">Strength</span>
+                            <span class="attr-badge dexterity-badge">Dexterity</span>
+                        </div>
+                    </div>
+                    <div class="archetype-content">
+                        <p class="archetype-description">
+                            Masters of balanced combat, Gladiators blend the power of Strength with the finesse of Dexterity.
+                            Wielding swords and carved plating armor, they excel at sustained damage and critical strikes.
+                        </p>
+                        <div class="archetype-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Primary Role</span>
+                                <span class="stat-value">Duelist / DPS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Equipment</span>
+                                <span class="stat-value">Carved Plating, Swords</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Playstyle</span>
+                                <span class="stat-value">Balanced Offense</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Templar -->
+                <div class="archetype-card templar">
+                    <div class="archetype-header">
+                        <h3 class="archetype-name">Templar</h3>
+                        <div class="archetype-attributes">
+                            <span class="attr-badge strength-badge">Strength</span>
+                            <span class="attr-badge intelligence-badge">Intelligence</span>
+                        </div>
+                    </div>
+                    <div class="archetype-content">
+                        <p class="archetype-description">
+                            Versatile warriors who bridge the physical and arcane. Templars can emphasize raw physical prowess
+                            or devastating elemental channeling through strategic item selection.
+                        </p>
+                        <div class="archetype-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Primary Role</span>
+                                <span class="stat-value">Spellblade / Hybrid</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Equipment</span>
+                                <span class="stat-value">Adaptive Gear</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Playstyle</span>
+                                <span class="stat-value">Versatile Mastery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section id="developer" class="section developer-section">
+        <div class="container">
+            <h2 class="section-title">The Developer</h2>
+
+            <div class="developer-card">
+                <div class="developer-avatar">
+                    <img src="./assets/images/pfp4.png" alt="Daniel (Amora) - Developer" class="avatar-image">
+                </div>
+                <div class="developer-info">
+                    <h3 class="developer-name">Daniel Amorim</h3>
+                    <p class="developer-handle">@amorabot</p>
+                    <p class="developer-bio">
+                        Passionate about ARPG mechanics and deep itemization systems, I created Inscripted to bring
+                        the complexity and strategic depth of games like Path of Exile and Tibia into the Minecraft universe.
+                        Every system is designed with player agency and build diversity in mind.
+                    </p>
+
+                    <div class="developer-links">
+                        <a href="https://github.com/amorabot" target="_blank" rel="noopener noreferrer" class="dev-link github">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://discord.gg/SWnWghYRHr" target="_blank" rel="noopener noreferrer" class="dev-link discord">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                            </svg>
+                            Discord
+                        </a>
+                        <a href="mailto:daniel.amorim@alu.ufc.br" class="dev-link email">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="community-cta">
+                <h3>Join the Community</h3>
+                <p>Connect with other players, share builds, and stay updated on development</p>
+                <a href="https://discord.gg/SWnWghYRHr" target="_blank" rel="noopener noreferrer" class="cta-button">
+                    <svg class="discord-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                    </svg>
+                    Join Our Discord
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>INSCRIPTED</h4>
+                    <p>Redefining Minecraft ARPG Experience</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/amorabot/Inscripted" target="_blank" rel="noopener noreferrer">Source Code</a>
+                    <a href="https://discord.gg/SWnWghYRHr" target="_blank" rel="noopener noreferrer">Discord</a>
+                    <a href="mailto:daniel.amorim@alu.ufc.br">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Daniel Amorim. Licensed under MIT.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
