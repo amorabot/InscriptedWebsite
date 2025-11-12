@@ -276,27 +276,23 @@ ul {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: var(--spacing-xl) var(--spacing-md) calc(var(--spacing-xl) + 220px);
+    padding: var(--spacing-xl) var(--spacing-md);
     background: var(--color-bg-dark);
     overflow: hidden;
 }
 
+.hero-media {
+    position: relative;
+    width: min(90vw, 1200px);
+    margin: 0 auto var(--spacing-xl);
+    padding-bottom: 0;
+    z-index: 2;
+}
+
 .hero-background {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 85%;
-    max-width: 1100px;
+    width: 100%;
     height: auto;
-    background-image: url('../assets/images/inscriptedlogo.png');
-    background-size: contain;
-    background-position: top center;
-    background-repeat: no-repeat;
-    opacity: 1;
-    z-index: 0;
-    aspect-ratio: 16 / 9;
-    margin-top: 80px;
+    display: block;
 }
 
 .hero-overlay {
@@ -323,7 +319,7 @@ ul {
    ============================================ */
 .item-pedestals {
     position: absolute;
-    bottom: var(--spacing-lg);
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -332,7 +328,6 @@ ul {
     align-items: flex-end;
     gap: clamp(3rem, 8vw, 8rem);
     width: min(90%, 960px);
-    margin: 0 auto;
     animation: fadeInUp 1s ease 0.3s both;
 }
 
@@ -1088,25 +1083,21 @@ ul {
     }
 
     /* Hero */
-    .hero-background {
-        width: 90%;
+    .hero-media {
+        width: 100%;
+        padding-bottom: 0;
     }
 
-    .hero {
-        padding-bottom: var(--spacing-xl);
+    .hero-background {
+        width: 100%;
     }
 
     .item-pedestals {
         position: static;
         transform: none;
         width: 100%;
-        margin: 0 auto var(--spacing-md);
-    }
-
-    /* Item Pedestals */
-    .item-pedestals {
+        margin: var(--spacing-md) auto;
         gap: clamp(2rem, 6vw, 4rem);
-        margin-bottom: var(--spacing-md);
     }
 
     .item-sprite {
@@ -1145,10 +1136,6 @@ ul {
         justify-content: center;
     }
 
-    .concept-grid {
-        grid-template-columns: 1fr;
-    }
-
     /* Spacing */
     .section {
         padding: var(--spacing-lg) 0;
@@ -1169,9 +1156,9 @@ ul {
         font-size: 1rem;
     }
 
-    /* Hero Background */
-    .hero-background {
-        width: 95%;
+    .hero-media {
+        width: 100%;
+        padding-bottom: 0;
     }
 
     /* Item Pedestals - Stack vertically on very small screens */
